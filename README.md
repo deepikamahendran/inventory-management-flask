@@ -37,7 +37,7 @@ This is a web application built with Python's Flask framework for managing produ
     ```
     The application will be accessible at `http://127.0.0.1:5000`.
 
-🖼️ Application Views
+## 🖼️ Application Views
 The application interface is designed for clarity and easy navigation across key inventory tasks.
 
 1. Inventory Balance Report

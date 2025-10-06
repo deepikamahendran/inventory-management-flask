@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Inventory Balance Report</h2>
+
+{% if report_data %}
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Warehouse (Location)</th>
+                <th>Qty (Balance)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in report_data %}
+            <tr>
+                <td>{{ item.product }}</td>
+                <td>{{ item.warehouse }}</td>
+                <td>{{ item.qty }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No inventory balance found. Please add products, locations, and movements.</p>
+{% endif %}
+{% endblock %}

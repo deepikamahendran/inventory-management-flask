@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Manage Products</h2>
+
+<h3>Add New Product</h3>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description"><br><br>
+    <button type="submit">Add Product</button>
+</form>
+
+<hr>
+
+<h3>Current Products</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description or '-' }}</td>
+            <td>{{ product.product_id[:8] }}...</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

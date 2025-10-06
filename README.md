@@ -1,73 +1,41 @@
-📦 Inventory Management System (Flask + SQLAlchemy)
-A dedicated web application built on the Flask micro-framework, designed for real-time tracking and management of product stock across multiple storage locations or warehouses. This system provides granular control over inventory movements and generates instantaneous stock balance reports.
+# 📦 Inventory Management System (Flask + SQLAlchemy)
+This is a web application built with Python's Flask framework for managing product inventory across various locations (warehouses). It tracks all movements to provide a real-time stock balance report.
 
-✨ Key Features
-The application addresses core inventory control requirements through structured data management and reporting.
+## 🌟 Features
 
-Category
+* **Database Schema:** Uses SQLAlchemy models for Products, Locations, and ProductMovements.
+* **Data Entry:** Dedicated views for creating Products, Locations, and Movements (Incoming, Outgoing, Transfer).
+* **Real-time Reporting:** Calculates the net balance (quantity) of every product in every location.
 
-Feature
+## 🛠️ Setup and Running the Application
 
-Description
+### Prerequisites
 
-Data Integrity
+* Python 3.8+
+* `pip` (Python package installer)
 
-SQLAlchemy ORM
+### Installation Steps
 
-Utilizes robust SQLAlchemy models for Product, Location, and ProductMovement with UUID-based primary keys.
-
-Transaction Control
-
-Movement Logging
-
-Records every stock movement, including incoming, outgoing, and inter-location transfers, logging the timestamp and transaction qty.
-
-Core Functionality
-
-Master Data Management
-
-Dedicated views for professional data entry and listing of Products and Locations.
-
-Reporting
-
-Real-Time Stock Balance
-
-The primary report provides an aggregate view of the net quantity of every product currently held in every defined location/warehouse.
-
-🚀 Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-Prerequisites
-Python 3.8 or higher
-
-pip (Python package installer)
-
-git (Version control)
-
-Installation and Execution
-Clone the Repository:
-Retrieve the project files from GitHub.
-
-git clone [https://github.com/deepikamahendran/inventory-management-flask.git](https://github.com/deepikamahendran/inventory-management-flask.git)
-cd inventory-management-flask
-
-Install Dependencies:
-Install the required Python libraries (Flask, Flask-SQLAlchemy, etc.).
-
-pip install -r requirements.txt
-
-Initialize and Seed Database:
-These commands create the necessary local inventory.db file and populate it with sample data (products, locations, and 20 movement transactions) to immediately test the reporting feature.
-
-flask init-db
-flask seed-data
-
-Run the Local Server:
-Start the Flask development server.
-
-python app.py
-
-The application will be accessible via your browser at http://127.0.0.1:5000.
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/YourUsername/inventory-management-flask.git](https://github.com/YourUsername/inventory-management-flask.git)
+    cd inventory-management-flask
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Initialize and Seed Database:**
+    These commands create the required SQLite database file and populate it with test data (3 Products, 3 Locations, and 20 Movements).
+    ```bash
+    flask init-db
+    flask seed-data
+    ```
+4.  **Run the Server:**
+    ```bash
+    python app.py
+    ```
+    The application will be accessible at `http://127.0.0.1:5000`.
 
 🖼️ Application Views
 The application interface is designed for clarity and easy navigation across key inventory tasks.
